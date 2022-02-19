@@ -11,6 +11,7 @@ body {
   color: #eee;
   padding: 0;
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .main {
@@ -27,7 +28,7 @@ body {
 
 .a {
   height: 4.5rem;
-  width: 4.5rem;
+  width: 3rem;
   border: 3px solid white;
   display: flex;
   justify-content: center;
