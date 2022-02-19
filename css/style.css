@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rock+3D&display=swap');
 
 *,
 *::after,
@@ -11,26 +11,77 @@ body {
   color: #eee;
   padding: 0;
   margin: 0;
-  font-size: 1.5rem;
 }
 
-.main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+.drumKit {
   background-image: url('../images/main.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.a {
-  height: 4.5rem;
-  width: 3rem;
-  border: 3px solid white;
+.drumKitHeading {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 6rem;
+  color: lightgray;
+  text-align: center;
+  font-family: 'Rock 3D', cursive;
+}
+
+.main {
+  min-height: 76.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+}
+
+.key {
+  border: 0.4px solid black;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+}
+
+.sound {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .main {
+    min-height: 76.3vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
