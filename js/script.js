@@ -17,6 +17,18 @@ const removeTransition = function (e) {
 };
 
 const keys = document.querySelectorAll('.key');
+const sound = document.querySelectorAll('.btnAudio');
 
 keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 document.addEventListener('keydown', playSound);
+
+// click events
+
+for (let i = 0; i < keys.length; i++) {
+  keys[i].addEventListener('click', function () {
+    sound[i].play();
+    if (!sound[i]) return;
+    sound[i].currentTime = 0;
+    keys[i].classList.add('playing');
+  });
+}
